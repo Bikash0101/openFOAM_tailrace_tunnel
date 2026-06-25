@@ -126,14 +126,9 @@ Output CSV saved as `delH_vs_time_results.csv` in the working directory.
 
 ---
 
-## Author
-
-**Bikash Khadka**  
-B.E. Civil Engineering, IoE Pulchowk Campus, Tribhuvan University  
-Intern, Hydro Lab Pvt. Ltd., Kathmandu, Nepal
+## Authored 
+as intern, Hydro Lab Pvt. Ltd., Lalitpur, Nepal
+2026
 
 ---
-
-## Status
-
-🔄 Active — CFD simulation ongoing. Lumped-mass interpretation under review against OpenFOAM source-level pressure-velocity coupling behavior.
+Lumped-mass interpretation under review against OpenFOAM source-level pressure-velocity coupling behavior.
