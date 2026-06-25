@@ -1,4 +1,4 @@
-# OpenFOAM Tailrace Tunnel — Pressure Transient Analysis
+# OpenFOAM tailrace tunnel(Pressure Transient Analysis)
 
 CFD simulation of a merged tailrace tunnel serving three draft tube units of a hydropower plant, with a lumped-mass analytical model to interpret pressure transients observed during staged unit commissioning.
 
@@ -12,7 +12,7 @@ The third unit discharge was ramped gradually from 0 m³/s to 22 m³/s. Despite 
 
 ---
 
-## Pressure Spike — Physical Interpretation
+## Physical Interpretation of the pressure spike
 
 The observed pressure transient pattern is explained using the **lumped-mass (rigid water column) approach** for fluid inertia in conduit flow.
 
@@ -26,16 +26,16 @@ The inertial head required to accelerate the water column is:
 $$\Delta H = \frac{L}{gA} \frac{dQ}{dt}$$
 
 where:
-- $L$ — tunnel length from probe location to downstream end (m)
-- $g$ — gravitational acceleration (m/s²)
-- $A$ — tunnel cross-sectional area (m²)
-- $\frac{dQ}{dt}$ — rate of change of discharge (m³/s²)
+- $L$ = tunnel length from probe location to downstream end (m)
+- $g$ = gravitational acceleration (m/s²)
+- $A$ = tunnel cross-sectional area (m²)
+- $\frac{dQ}{dt}$ = rate of change of discharge (m³/s²)
 
-**Spike at onset:** When the third unit discharge is introduced, $dQ/dt$ is maximum at the start of the ramp. The entire upstream water column must be accelerated — the inertial head demand manifests as a pressure spike.
+**Spike at onset:** When the third unit discharge is introduced, $dQ/dt$ is maximum at the start of the ramp. The entire upstream water column must be accelerated, the inertial head demand manifests as a pressure spike.
 
 **Plateau during ramp:** Once the slug is moving at the demanded velocity, $dQ/dt$ is approximately constant (linear ramp), so $\Delta H$ remains steady.
 
-**Drop at end of ramp:** When the discharge reaches 22 m³/s and ramping stops, $dQ/dt$ returns to zero — the inertial driving head is no longer required and pressure drops back toward the pre-addition baseline.
+**Drop at end of ramp:** When the discharge reaches 22 m³/s and ramping stops, $dQ/dt$ returns to zero, the inertial driving head is no longer required and pressure drops back toward the pre-addition baseline.
 
 This is physically consistent with the incompressible Navier-Stokes momentum equation solved by OpenFOAM (PIMPLE), where the $\partial \mathbf{u}/\partial t$ term represents the same inertial mechanism. The lumped-mass model is a 0D simplification of the same physics, valid when spatial variation along the tunnel is secondary to temporal acceleration effects.
 
