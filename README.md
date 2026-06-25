@@ -43,7 +43,7 @@ This is physically consistent with the incompressible Navier-Stokes momentum equ
 
 ---
 
-## Simulation Setup
+## Simplified setup of openfoFOAM simulation in this python analysis
 
 | Parameter | Value |
 |---|---|
